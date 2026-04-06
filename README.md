@@ -7,7 +7,9 @@ https://daniildongiv.github.io/BlastTestCocos/
 
 ## GIF демо
 
-![Gameplay GIF](docs/preview.gif)
+<p align="center">
+  <img src="docs/preview.gif" alt="Gameplay GIF" width="520" />
+</p>
 
 ## Геймплей
 - Цель: `TARGET_SCORE` очков за `MAX_MOVES` ходов (`config/GameConfig.ts`).
@@ -18,14 +20,24 @@ https://daniildongiv.github.io/BlastTestCocos/
 
 ## Скриншоты
 
-| Геймплей | Победа | Поражение |
-|---|---|---|
-
-| ![Геймплей](docs/screenshot-gameplay.png) | ![Победа](docs/screenshot-win.png) | ![Поражение](docs/screenshot-lose.png) |
+<table>
+  <tr>
+    <th>Геймплей</th>
+    <th>Победа</th>
+    <th>Поражение</th>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshot-gameplay.png" alt="Геймплей" width="280" /></td>
+    <td><img src="docs/screenshot-win.png" alt="Победа" width="280" /></td>
+    <td><img src="docs/screenshot-lose.png" alt="Поражение" width="280" /></td>
+  </tr>
+</table>
 
 ## FSM таблица
 
-![FSM Table](docs/fsm-table.png)
+<p align="center">
+  <img src="docs/fsm-table.png" alt="FSM Table" width="900" />
+</p>
 
 ## Архитектура (слои)
 - `assets/Scripts/core/` — доменная логика без зависимостей от Cocos (FieldModel, GameSession, MatchResolver, типы)
