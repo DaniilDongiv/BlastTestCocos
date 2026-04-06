@@ -27,6 +27,9 @@
 2. Публичные хендлеры в `BlastGame`: `onBombClicked`, `onTeleportClicked`.
 3. В `Button.Click Events`: Target — нода с `BlastGame`, Component — `BlastGame`, Handler — метод.
 
+## Ссылка на Pages
+https://daniildongiv.github.io/BlastTestCocos/
+
 ## Скриншоты
 | Геймплей | Победа | Поражение |
 |---|---|---|
