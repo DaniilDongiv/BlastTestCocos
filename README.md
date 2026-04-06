@@ -2,13 +2,12 @@
 
 Прототип игры с механикой Blast (match-2): кликай по группе смежных тайлов одного цвета, зарабатывай очки, используй бустеры и супер-тайлы.
 
-## Архитектура (слои)
-- `assets/Scripts/core/` — доменная логика без зависимостей от Cocos (FieldModel, GameSession, MatchResolver, типы)
-- `assets/Scripts/input/` — обработка ввода (State-паттерн)
-- `assets/Scripts/strategies/` — эффекты супер-тайлов (Strategy-паттерн)
-- `assets/Scripts/rendering/` — визуал и анимации (FieldRenderer, HUDPresenter, TileRenderer, ResultPopup)
-- `assets/Scripts/config/` — константы игры (`GameConfig`)
-- `assets/Scripts/BlastGame.ts` — фасад/оркестратор подсистем
+## Ссылка на Pages
+https://daniildongiv.github.io/BlastTestCocos/
+
+## GIF демо
+
+![Gameplay GIF](docs/preview.gif)
 
 ## Геймплей
 - Цель: `TARGET_SCORE` очков за `MAX_MOVES` ходов (`config/GameConfig.ts`).
@@ -16,6 +15,25 @@
 - Супер-тайлы по порогам (`GameConfig`): строка, столбец, радиус, всё поле.
 - Бустеры: бомба (`BOMB_RADIUS`), телепорт (swap).
 - Авто-шафл до `MAX_SHUFFLES`, далее поражение.
+
+## Скриншоты
+
+| Геймплей | Победа | Поражение |
+|---|---|---|
+
+| ![Геймплей](docs/screenshot-gameplay.png) | ![Победа](docs/screenshot-win.png) | ![Поражение](docs/screenshot-lose.png) |
+
+## FSM таблица
+
+![FSM Table](docs/fsm-table.png)
+
+## Архитектура (слои)
+- `assets/Scripts/core/` — доменная логика без зависимостей от Cocos (FieldModel, GameSession, MatchResolver, типы)
+- `assets/Scripts/input/` — обработка ввода (State-паттерн)
+- `assets/Scripts/strategies/` — эффекты супер-тайлов (Strategy-паттерн)
+- `assets/Scripts/rendering/` — визуал и анимации (FieldRenderer, HUDPresenter, TileRenderer, ResultPopup)
+- `assets/Scripts/config/` — константы игры (`GameConfig`)
+- `assets/Scripts/BlastGame.ts` — фасад/оркестратор подсистем
 
 ## Паттерны/принципы
 - Facade (`BlastGame`), State (ввод), Strategy (супер-тайлы), DIP (`IFieldQuery`).
@@ -26,21 +44,3 @@
 1. На `BoosterBombPanel` и `BoosterTeleportPanel` — `cc.Button`.
 2. Публичные хендлеры в `BlastGame`: `onBombClicked`, `onTeleportClicked`.
 3. В `Button.Click Events`: Target — нода с `BlastGame`, Component — `BlastGame`, Handler — метод.
-
-## Ссылка на Pages
-https://daniildongiv.github.io/BlastTestCocos/
-
-## Скриншоты
-
-| Геймплей | Победа | Поражение |
-|---|---|---|
-
-| ![Геймплей](docs/screenshot-gameplay.png) | ![Победа](docs/screenshot-win.png) | ![Поражение](docs/screenshot-lose.png) |
-
-## GIF демо
-
-![Gameplay GIF](docs/preview.gif)
-
-## FSM таблица
-
-![FSM Table](docs/fsm-table.png)
