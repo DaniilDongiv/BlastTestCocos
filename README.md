@@ -2,20 +2,6 @@
 
 Прототип игры с механикой Blast (match-2): кликай по группе смежных тайлов одного цвета, зарабатывай очки, используй бустеры и супер-тайлы.
 
-## Среда
-- Cocos Creator: 2.4.x
-- TypeScript: встроенный
-
-## Запуск
-1. File → Open Project → укажите корень репозитория.
-2. Сцена: `assets/Scene.fire`.
-3. Запуск в редакторе: кнопка Play (либо Ctrl/Cmd+P).
-
-## Сборка (Web Mobile)
-1. Project → Build → Platform: Web Mobile.
-2. Build (при необходимости Compile).
-3. Артефакты: `build/web-mobile`.
-
 ## Архитектура (слои)
 - `assets/Scripts/core/` — доменная логика без зависимостей от Cocos (FieldModel, GameSession, MatchResolver, типы)
 - `assets/Scripts/input/` — обработка ввода (State-паттерн)
@@ -40,8 +26,5 @@
 1. На `BoosterBombPanel` и `BoosterTeleportPanel` — `cc.Button`.
 2. Публичные хендлеры в `BlastGame`: `onBombClicked`, `onTeleportClicked`.
 3. В `Button.Click Events`: Target — нода с `BlastGame`, Component — `BlastGame`, Handler — метод.
-
-## Лицензия
-MIT
 
 
