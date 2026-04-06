@@ -1,7 +1,6 @@
 # BlastTest — Cocos Creator 2.4.x, TypeScript
 
 Прототип игры с механикой Blast (match-2): кликай по группе смежных тайлов одного цвета, зарабатывай очки, используй бустеры и супер-тайлы.
-<<<<<<< HEAD
 
 ## Архитектура (слои)
 - `assets/Scripts/core/` — доменная логика без зависимостей от Cocos (FieldModel, GameSession, MatchResolver, типы)
@@ -31,7 +30,4 @@
 ## Скриншоты
 | Геймплей | Победа | Поражение |
 |---|---|---|
-<<<<<<< HEAD
-| ![Геймплей](docs/screenshot-gameplay.png) | ![Победа](docs/screenshot-win.png) | ![Поражение](docs/screenshot-lose.png) |
-=======
 | ![Геймплей](docs/screenshot-gameplay.png) | ![Победа](docs/screenshot-win.png) | ![Поражение](docs/screenshot-lose.png) |
