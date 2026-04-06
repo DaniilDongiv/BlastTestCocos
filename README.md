@@ -26,3 +26,9 @@
 1. На `BoosterBombPanel` и `BoosterTeleportPanel` — `cc.Button`.
 2. Публичные хендлеры в `BlastGame`: `onBombClicked`, `onTeleportClicked`.
 3. В `Button.Click Events`: Target — нода с `BlastGame`, Component — `BlastGame`, Handler — метод.
+
+## Скриншоты
+
+| Геймплей | Победа | Поражение |
+|---|---|---|
+| ![Геймплей](docs/screenshot-gameplay.png) | ![Победа](docs/screenshot-win.png) | ![Поражение](docs/screenshot-lose.png) |
