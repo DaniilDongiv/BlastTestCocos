@@ -31,6 +31,16 @@
 https://daniildongiv.github.io/BlastTestCocos/
 
 ## Скриншоты
+
 | Геймплей | Победа | Поражение |
 |---|---|---|
+
 | ![Геймплей](docs/screenshot-gameplay.png) | ![Победа](docs/screenshot-win.png) | ![Поражение](docs/screenshot-lose.png) |
+
+## GIF демо
+
+![Gameplay GIF](docs/preview.gif)
+
+## FSM таблица
+
+![FSM Table](docs/fsm-table.png)
