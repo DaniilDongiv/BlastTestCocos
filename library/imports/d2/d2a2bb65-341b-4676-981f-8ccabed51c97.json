@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "GamePanel",
+    "texture": "c96e7125-850c-44d3-95ee-3300aa6dabfb",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      939,
+      1034
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      939,
+      1034
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

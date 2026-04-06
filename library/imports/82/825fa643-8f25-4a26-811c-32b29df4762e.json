@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ScorePanel",
+    "texture": "d72afd72-d1b1-44b6-a021-54b3f29385e7",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      872,
+      321
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      872,
+      321
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

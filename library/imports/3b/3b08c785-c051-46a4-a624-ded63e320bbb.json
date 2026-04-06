@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "BoosterPanel",
+    "texture": "18c9ea50-3ef8-466d-ae94-61d4c6a07c93",
+    "atlas": "",
+    "rect": [
+      7,
+      3,
+      326,
+      340
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      340,
+      347
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
