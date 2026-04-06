@@ -73,7 +73,7 @@ export class HUDPresenter {
     }
 
     public setScore(current: number, target: number): void {
-        if (this.scoreLabel) this.scoreLabel.string = `${current}/${target}`;
+        if (this.scoreLabel) this.scoreLabel.string = `ОЧКИ:\n${current}/${target}`;
     }
 
     public setMoves(remaining: number): void {
