@@ -2,18 +2,19 @@
 
 Прототип игры с механикой Blast (match-2): кликай по группе смежных тайлов одного цвета, зарабатывай очки, используй бустеры и супер-тайлы.
 
-## Версии
+## Среда
 - Cocos Creator: 2.4.x
-- TypeScript: встроенный в проект
+- TypeScript: встроенный
 
-## Как запустить
-1. Открой проект в Cocos Creator 2.4.x (папка `D:\CocosProject\BlastTest`).
-2. Открой сцену (если нужна) и запусти Play.
+## Запуск
+1. File → Open Project → укажите корень репозитория.
+2. Сцена: `assets/Scene.fire`.
+3. Запуск в редакторе: кнопка Play (либо Ctrl/Cmd+P).
 
 ## Сборка (Web Mobile)
-1. Project → Build → Platform: Web Mobile
-2. Build (и, при необходимости, Compile)
-3. Готовая сборка: `build/web-mobile`
+1. Project → Build → Platform: Web Mobile.
+2. Build (при необходимости Compile).
+3. Артефакты: `build/web-mobile`.
 
 ## Архитектура (слои)
 - `assets/Scripts/core/` — доменная логика без зависимостей от Cocos (FieldModel, GameSession, MatchResolver, типы)
@@ -24,25 +25,23 @@
 - `assets/Scripts/BlastGame.ts` — фасад/оркестратор подсистем
 
 ## Геймплей
-- Цель: набрать `TARGET_SCORE` очков за `MAX_MOVES` ходов (`config/GameConfig.ts`).
-- Клик по группе ≥ `MIN_GROUP_SIZE` — сжигает группу, начисляет очки, запускает гравитацию и спавн.
-- Супер-тайл появляется при больших группах (пороги в `GameConfig`):
-  - Строка, столбец, радиус, всё поле.
-- Бустеры:
-  - Бомба (радиус `BOMB_RADIUS`)
-  - Телепорт (обмен двух тайлов)
-- Авто-перемешивание до `MAX_SHUFFLES` раз, затем поражение.
+- Цель: `TARGET_SCORE` очков за `MAX_MOVES` ходов (`config/GameConfig.ts`).
+- Клик по группе ≥ `MIN_GROUP_SIZE` — сжигает группу, гравитация и спавн.
+- Супер-тайлы по порогам (`GameConfig`): строка, столбец, радиус, всё поле.
+- Бустеры: бомба (`BOMB_RADIUS`), телепорт (swap).
+- Авто-шафл до `MAX_SHUFFLES`, далее поражение.
 
-## Паттерны и принципы
-- Facade (`BlastGame`), State (ввод), Strategy (супер-тайлы), DIP через `IFieldQuery`.
-- SOLID соблюдён, логика/визуал разделены.
-- Анимации — `async/await` + `Promise.all`.
+## Паттерны/принципы
+- Facade (`BlastGame`), State (ввод), Strategy (супер-тайлы), DIP (`IFieldQuery`).
+- SOLID, разделение логики и визуала.
+- Анимации: `async/await` + `Promise.all`.
 
-## Настройка кнопок (через сцену)
-1. На `BoosterBombPanel` и `BoosterTeleportPanel` повесь `cc.Button`.
-2. В `BlastGame` есть публичные хендлеры: `onBombClicked`, `onTeleportClicked`.
-3. В `Button.Click Events`: Target — нода с `BlastGame`, Component — `BlastGame`, Handler — нужный метод.
+## Кнопки (через сцену)
+1. На `BoosterBombPanel` и `BoosterTeleportPanel` — `cc.Button`.
+2. Публичные хендлеры в `BlastGame`: `onBombClicked`, `onTeleportClicked`.
+3. В `Button.Click Events`: Target — нода с `BlastGame`, Component — `BlastGame`, Handler — метод.
 
 ## Лицензия
 MIT
+
 
